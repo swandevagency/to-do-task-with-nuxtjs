@@ -2,7 +2,7 @@
 
 <div class="div">
   <navbar />
-  <h1>Welcome to Uncle's todo task </h1>
+  <h1>Welcome to Mehraeen's task manager</h1>
 </div>
 </template>
 

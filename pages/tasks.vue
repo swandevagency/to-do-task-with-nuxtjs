@@ -12,7 +12,7 @@
     <h3>You can manage your tasks here</h3>
     <section>
       <div class="head">
-        <button class="title" @click="SaveAll()">Save All</button>
+        <h3>Task manager</h3>
         <button @click="addTask()">Add Task</button>
       </div>
       <ul class="tasks">
@@ -74,7 +74,7 @@ export default {
       this.DeleteTask(c)
       this.showAddTask = false
       this.needEdit = false
-      
+      this.SaveAll()
     },
     SaveAll(){
       localStorage.setItem("tasks", JSON.stringify(this.tasks))
@@ -87,6 +87,7 @@ export default {
     },
     DeleteTask(num){
       this.tasks = this.tasks.filter((task)=>num !== task.id)
+      this.SaveAll()
     },
     EditTask(id){
       this.showAddTask = true
